@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sound</title>
+	<style type="text/css">
+		.thum{height: 200px;}
+		.thum:hover{opacity: 1;}
+		#ap{opacity: 0;}
+	</style>
+</head>
+<body>
+	<h1 id="ah">동물친구들은 어떤 소리를 낼까요?</h1><br>
+	<h2 id="ap">난 동물이 아냐</h2>
+	<img src="a.jpg" class="thum" id="a">
+	<img src="b.jpg" class="thum" id="b">
+	<img src="c.jpg" class="thum" id="c">
+	<audio src="aa.mp3" id="aa" loop></audio>
+	<audio src="bb.mp3" id="bb" loop></audio>
+	<audio src="cc.mp3" id="cc" loop></audio>
+
+	<script type="text/javascript">
+	var astate = "off;"
+	a.onclick =function(){
+	if(astate =="off"){
+		aa.play(); astate =  "on";
+	a.style.opacity = "1";
+	document.body.style.background="url(b.jpg)";
+	b.style.opacity = "0";
+	c.style.opacity = "0";
+	ap.style.opacity = "1";
+	ah.style.opacity = "0";
+ } 
+	else{aa.pause(); astate="off";
+a.style.opacity="1";
+document.body.style.background="none";
+b.style.opacity = "1";
+	c.style.opacity = "1";
+ap.style.opacity = "0";
+	ah.style.opacity = "1";}
+}
+
+var bstate = "off;"
+	b.onclick =function(){
+	if(bstate =="off"){
+		bb.play(); astate =  "on";
+	b.style.opacity = "1";
+	document.body.style.background="url(c.jpg)";
+	a.style.opacity = "0";
+	c.style.opacity = "0";
+	ap.style.opacity = "1";
+	ah.style.opacity = "0";
+ } 
+	else{bb.pause(); bstate="off";
+	b.style.opacity="1";
+		document.body.style.background="none";
+		a.style.opacity = "1";
+		c.style.opacity = "1";
+		ap.style.opacity = "0";
+	ah.style.opacity = "1";
+	}
+}
+
+var cstate = "off;"
+	c.onclick =function(){
+	if(cstate =="off"){
+		cc.play(); cstate =  "on";
+	c.style.opacity = "1";
+	document.body.style.background="url(a.jpg)";
+	a.style.opacity = "0";
+	b.style.opacity = "0";
+	ap.style.opacity = "1";
+	ah.style.opacity = "0";
+ } 
+	else{cc.pause(); cstate="off";
+	c.style.opacity="1";
+		document.body.style.background="none";
+		a.style.opacity = "1";
+		b.style.opacity = "1";
+		ap.style.opacity = "0";
+	ah.style.opacity = "1";}
+}
+</script>
+
+
+</body>
+</html>
